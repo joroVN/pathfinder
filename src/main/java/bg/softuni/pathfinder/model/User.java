@@ -20,7 +20,7 @@ public class User {
     @Column(unique = true)
     private String email;
     @Column(name = "full_name")
-    private String fullname;
+    private String fullName;
     private int age;
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
@@ -85,15 +85,6 @@ public class User {
         return this;
     }
 
-    public String getFullName() {
-        return fullname;
-    }
-
-    public User setFullName(String fullName) {
-        this.fullname = fullName;
-        return this;
-    }
-
     public int getAge() {
         return age;
     }
@@ -103,4 +94,12 @@ public class User {
         return this;
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public User setFullName(String fullName) {
+        this.fullName = fullName;
+        return this;
+    }
 }
